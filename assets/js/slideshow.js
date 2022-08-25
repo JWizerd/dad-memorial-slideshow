@@ -3,7 +3,7 @@ const audio = document.getElementById("audio");
 const headline = document.getElementById('headline');
 const initialHeadlineText = headline.innerText;
 const SLIDE_DURATION = Math.floor(((audio.duration / IMG_COUNT) * 1000));
-const finalHeadlineText = "At last, home with Stan"
+const finalHeadlineText = "Finally at peace..."
 const sliderOptions = {
   container: "#slider",
   items: 1,
