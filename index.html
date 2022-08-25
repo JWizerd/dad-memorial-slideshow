@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>James Wodke: Memorial Slideshow</title>
+  <link rel="stylesheet" href="assets/css/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/tiny-slider.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="controls">
+      <i class="fa fa-play" id="slideshow"></i>
+      <i class="fa fa-repeat" id="restart"></i>
+    </div>
+  </header>
+  <div id="slider-wrapper"></div>
+  <footer>
+    <h1 id="headline">James Wodke: 1945 - 2022</h1>
+  </footer>
+  <!--
+
+  1st song: 181 seconds
+  2nd song: 311 seconds
+
+  Total: 509 seconds of audio
+
+  Both Songs:
+  Song: 311 / 6.89 = 46 photos
+
+  -->
+  <audio id="audio">
+    <source type="audio/mp3" src="assets/audio/illseeyouagain.mp3">
+    <source type="audio/mp3" src="assets/audio/illseeyouagain.ogg">
+    Sorry, your browser does not support HTML5 audio.
+  </audio>
+  <script src="data/slides.js"></script>
+  <script src="assets/js/tiny-slider.js"></script>
+  <script src="assets/js/slideshow.js"></script>
+</body>
+</html>
