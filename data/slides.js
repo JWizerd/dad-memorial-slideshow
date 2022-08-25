@@ -1,0 +1,1 @@
+window.SLIDE_DATA = [{"url":"assets/img/slides/52311061934_ddf10395d6_o.jpg"}];
