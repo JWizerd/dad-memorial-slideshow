@@ -49,8 +49,8 @@ function getEndpoint() {
   const url = new URL("https://api.flickr.com/services/rest");
   let params = new URLSearchParams();
   params.set('method', 'flickr.photosets.getPhotos');
-  params.set('api_key', '87b8cc4a3b91905bef80d87830eb658c');
-  params.set('user_id', '164697344@N07');
+  params.set('api_key', '5d9ded4b4cfd55d1f7b273239231aa31');
+  params.set('user_id', '196340714@N05');
   params.set('photoset_id', '72177720295822995');
   params.set('extras', 'url_o,url_m');
   params.set('format', 'json')
