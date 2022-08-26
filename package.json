@@ -1,0 +1,26 @@
+{
+  "name": "dad-memorial-slideshow",
+  "version": "1.0.0",
+  "description": "## Integrations - Flickr API: [flickr.photosets.getPhotos](https://www.flickr.com/services/api/flickr.photosets.getPhotos.html) - [Tiny Slider](https://github.com/ganlanyuan/tiny-slider)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JWizerd/dad-memorial-slideshow.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JWizerd/dad-memorial-slideshow/issues"
+  },
+  "homepage": "https://github.com/JWizerd/dad-memorial-slideshow#readme",
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "lightbox2": "^2.11.3",
+    "masonry": "0.0.2",
+    "tiny-slider": "^2.9.4"
+  }
+}
