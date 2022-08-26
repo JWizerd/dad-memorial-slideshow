@@ -155,6 +155,20 @@ hr.fancy:before { /* Not really supposed to work, but does */
   border-radius: 20px;
 }
 
+.sidenav-overlay {
+  z-index: 1;
+}
+
+.sidenav-trigger {
+  position: absolute;
+  color: white;
+  padding: 10px;
+  margin: 0px;
+  right: 0;
+  top: 0;
+  background: rgba(0, 0, 0, .2);
+}
+
 @media all and (max-width:767px) {
   h1 {
     font-size: 25px;

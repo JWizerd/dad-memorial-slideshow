@@ -66,6 +66,7 @@ function hideArrowBtns() {
 function hideButtons() {
   hideButton('slideshow');
   hideButton('loop');
+  hideButton('sidenav-trigger')
   showButton('restart');
   hideArrowBtns();
 }
