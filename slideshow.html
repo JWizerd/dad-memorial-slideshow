@@ -7,13 +7,14 @@
   <title>James Wodke: Memorial Slideshow</title>
   <link rel="stylesheet" href="assets/css/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="assets/css/tiny-slider.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/slideshow.css">
 </head>
 <body>
   <header>
     <div class="controls">
       <i class="fa fa-play" id="slideshow"></i>
-      <i class="fa fa-repeat" id="restart"></i>
+      <i class="fa fa-stop hide" id="restart"></i>
+      <i class="fa fa-repeat" id="loop"></i>
     </div>
   </header>
   <div id="slider-wrapper"></div>
@@ -31,9 +32,14 @@
   Song: 311 / 6.89 = 46 photos
 
   -->
-  <audio id="audio">
+  <audio class="song" id="song-1">
     <source type="audio/mp3" src="assets/audio/Hollyn--In-Awe.mp3">
     <source type="audio/mp3" src="assets/audio/Hollyn--In-Awe.ogg">
+    Sorry, your browser does not support HTML5 audio.
+  </audio>
+  <audio class="song" id="song-2">
+    <source type="audio/mp3" src="assets/audio/illseeyouagain.mp3">
+    <source type="audio/mp3" src="assets/audio/illseeyouagain.ogg">
     Sorry, your browser does not support HTML5 audio.
   </audio>
   <script src="data/slides.js"></script>
