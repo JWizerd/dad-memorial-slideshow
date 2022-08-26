@@ -169,6 +169,12 @@ hr.fancy:before { /* Not really supposed to work, but does */
   background: rgba(0, 0, 0, .2);
 }
 
+@media all and (max-width: 991px) {
+  .hero {
+    display: block;
+  }
+}
+
 @media all and (max-width:767px) {
   h1 {
     font-size: 25px;
