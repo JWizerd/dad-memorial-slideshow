@@ -19,8 +19,7 @@
   "homepage": "https://github.com/JWizerd/dad-memorial-slideshow#readme",
   "dependencies": {
     "font-awesome": "^4.7.0",
-    "lightbox2": "^2.11.3",
-    "masonry": "0.0.2",
+    "photoswipe": "^5.3.0",
     "tiny-slider": "^2.9.4"
   }
 }

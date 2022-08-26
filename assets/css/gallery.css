@@ -1,0 +1,17 @@
+#gallery-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.gallery-item {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.gallery-img {
+  max-width: 200px;
+}
