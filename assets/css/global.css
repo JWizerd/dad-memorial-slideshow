@@ -99,6 +99,62 @@ h2 {
   font-size: 40px;
 }
 
+.obit {
+  padding: 50px;
+}
+
+.obit p {
+  margin-bottom: 24px;
+}
+
+.obit.container {
+  background-color: rgba(255,255,255,.75)
+}
+
+.mb40 {
+  margin-bottom: 40px;
+}
+
+.mb25 {
+  margin-bottom: 25px;
+}
+
+.mt25 {
+  margin-top: 25px;
+}
+
+.mb50 {
+  margin-bottom: 50px;
+}
+
+.mtb25 {
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+hr.fancy {
+  overflow: visible; /* For IE */
+  height: 30px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px 0 0 0;
+  border-radius: 20px;
+}
+hr.fancy:before { /* Not really supposed to work, but does */
+  display: block;
+  content: "";
+  height: 30px;
+  margin-top: -31px;
+  border-style: solid;
+  border-color: black;
+  border-width: 0 0 1px 0;
+  border-radius: 20px;
+}
+
 @media all and (max-width:767px) {
   h1 {
     font-size: 25px;
