@@ -16,7 +16,9 @@ function setInitialMap({ photo }) {
     imageMap[img.id] = {
       order: index + 1,
       url: img.url_m || img.url_o,
-      id: img.id
+      id: img.id,
+      width: img.width_m || img.width_o,
+      height: img.height_m || img.height_o
     }
   }
 
@@ -91,7 +93,12 @@ async function buildDataset(images) {
   }
 
   const sortByOrder = (a, b) => images[a] < images[b] ? -1 : 1;
-  const transformToSlideShape = (key) => ({ url: images[key].url });
+  const transformToSlideShape = (key) => ({
+    url: images[key].url,
+    width: images[key].width,
+    height: images[key].height,
+    id: images[key].id
+  });
   const mapToArray = Object.keys(images).sort(sortByOrder).map(transformToSlideShape);
   fs.writeFileSync(DATA_PATH, `window.SLIDE_DATA = ${JSON.stringify(mapToArray)};`);
 }
@@ -117,7 +124,10 @@ async function buildDataset(images) {
         const dest = `${SLIDE_DIR}/${filename}`;
         const localPath = await download(photo.url_o, dest);
         imageMap[photo.id] = {
-          url: localPath
+          url: localPath,
+          width: photo.width_m || photo.width_o,
+          height: photo.height_m || photo.height_o,
+          id: photo.id
         };
       } else {
         throw new Error(`Couldn't locate url_o on file: ${JSON.stringify(photo)}`);
