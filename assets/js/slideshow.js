@@ -1,8 +1,18 @@
+function calculateTotalAudio () {
+  let total = 0;
+  for (song of document.getElementsByClassName('song')) {
+    total += song.duration;
+  }
+
+  return total;
+}
+
 const IMG_COUNT = window.SLIDE_DATA.length;
-const audio = document.getElementById("audio");
+
 const headline = document.getElementById('headline');
 const initialHeadlineText = headline.innerText;
-const SLIDE_DURATION = Math.floor(((audio.duration / IMG_COUNT) * 1000));
+const songOne = document.getElementById('song-1');
+const songTwo = document.getElementById('song-2');
 const finalHeadlineText = "Finally at peace..."
 const sliderOptions = {
   container: "#slider",
@@ -53,9 +63,35 @@ function hideArrowBtns() {
   arrowBtns.forEach(btn => btn.classList.add('hidden'));
 }
 
+function hideButtons() {
+  hideButton('slideshow');
+  hideButton('loop');
+  showButton('restart');
+  hideArrowBtns();
+}
+
+function loopSlideshow(slider) {
+  const LOOP_SLIDE_DURATION = 15 * 1000;
+  slider.goTo(0);
+  let idx = 1;
+
+  setInterval(() => {
+    slider.goTo(idx);
+    idx++;
+
+    if (idx === IMG_COUNT) {
+      slider.goTo(0);
+      idx = 1;
+    }
+  }, LOOP_SLIDE_DURATION);
+
+  hideButtons();
+}
+
 function playSlideshow(slider) {
-  const audio = document.getElementById("audio");
-  const DURATION = Math.floor(((audio.duration / IMG_COUNT) * 1000));
+  const audio = document.getElementById("song-1");
+  const TOTAL_AUDIO_DURATION = calculateTotalAudio();
+  const SLIDE_DURATION = Math.floor(((TOTAL_AUDIO_DURATION / IMG_COUNT) * 1000));
   audio.play();
   slider.goTo(0);
   let idx = 1;
@@ -66,18 +102,21 @@ function playSlideshow(slider) {
     // this check allows the last image to run for 2x DURATION
     // which allows for the final text to display longer
     if (idx === IMG_COUNT) clearInterval(autoplay)
-  }, DURATION);
+  }, SLIDE_DURATION);
 
-  hidePlayButton();
-  hideArrowBtns();
+  hideButtons();
 }
 
 function restart() {
   location.reload();
 }
 
-function hidePlayButton() {
-  document.getElementById('slideshow').classList.add('hide');
+function hideButton(id) {
+  document.getElementById(id).classList.add('hide');
+}
+
+function showButton(id) {
+  document.getElementById(id).classList.remove('hide');
 }
 
 function init(){
@@ -85,9 +124,18 @@ function init(){
   const slider = tns(sliderOptions);
   document.getElementById('slideshow').addEventListener('click', () => playSlideshow(slider));
   document.getElementById('restart').addEventListener('click', restart);
-  document.querySelectorAll('.tns-controls button').forEach(btn => btn.addEventListener('click', hidePlayButton));
+  document.getElementById('loop').addEventListener('click', () => loopSlideshow(slider));
+  document.querySelectorAll('.tns-controls button').forEach(btn => btn.addEventListener('click', () => {
+    hideButton('slideshow');
+    hideButton('loop');
+    showButton('stop');
+  }));
 
-  audio.onended = function() {
+  songOne.onended = function() {
+    songTwo.play();
+  }
+
+  songTwo.onended = function() {
     headline.innerText = finalHeadlineText;
 
     setTimeout(() => {
