@@ -4,6 +4,10 @@
   padding: 40px 0;
 }
 
+#gallery {
+  text-align: center;
+}
+
 .gallery-item {
   display: inline-block;
   width: 200px;

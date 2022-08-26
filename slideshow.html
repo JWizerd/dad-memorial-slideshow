@@ -7,6 +7,7 @@
   <title>James Wodke: Memorial Slideshow</title>
   <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="assets/tiny-slider/dist/tiny-slider.css">
+  <link type="text/css" rel="stylesheet" href="assets/materialize/css/materialize.min.css" media="screen,projection" />
   <link rel="stylesheet" href="assets/css/global.css">
   <link rel="stylesheet" href="assets/css/slideshow.css">
 </head>
@@ -17,6 +18,14 @@
       <i class="fa fa-stop hide" id="restart"></i>
       <i class="fa fa-repeat" id="loop"></i>
     </div>
+    <!-- NAVBAR -->
+    <ul id="slide-out" class="sidenav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="slideshow.html">Slideshow</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+    <a href="#" data-target="slide-out" class="sidenav-trigger" id="sidenav-trigger">MENU</a>
+    <!-- END NAVBAR -->
   </header>
   <div id="slider-wrapper"></div>
   <footer>
@@ -43,6 +52,9 @@
     <source type="audio/mp3" src="assets/audio/illseeyouagain.ogg">
     Sorry, your browser does not support HTML5 audio.
   </audio>
+
+  <script type="text/javascript" src="assets/materialize/js/materialize.min.js"></script>
+  <script type="text/javascript" src="assets/js/global.js"></script>
   <script src="data/slides.js"></script>
   <script src="assets/tiny-slider/dist/min/tiny-slider.js"></script>
   <script src="assets/js/slideshow.js"></script>
