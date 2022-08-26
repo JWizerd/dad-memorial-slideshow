@@ -128,7 +128,7 @@ function init(){
   document.querySelectorAll('.tns-controls button').forEach(btn => btn.addEventListener('click', () => {
     hideButton('slideshow');
     hideButton('loop');
-    showButton('stop');
+    showButton('restart');
   }));
 
   songOne.onended = function() {
