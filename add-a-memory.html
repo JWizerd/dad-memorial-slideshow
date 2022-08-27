@@ -10,46 +10,57 @@
 </head>
 
 <body>
-<div class="container obit">
-    <div class="row">
-        <div class="col s12">
-            <h1>Please share your fondest memories.</h1>
+    <header>
+        <!-- NAVBAR -->
+        <ul id="slide-out" class="sidenav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="slideshow.html">Slideshow</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="add-a-memory.html" class="active">Add a Memory</a></li>
+        </ul>
+        <a href="#" data-target="slide-out" class="sidenav-trigger">&#9776; MENU</a>
+        <!-- END NAVBAR -->
+    </header>
+    <div class="container obit">
+        <div class="row">
+            <div class="col s12">
+                <h1>Please share your fondest memories.</h1>
+            </div>
+
+            <form class="col s12" id="add-a-memory-form">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="firstName" type="text" class="validate">
+                        <label for="firstName">First Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="lastName" type="text" class="validate">
+                        <label for="lastName">Last Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="memory" class="materialize-textarea"></textarea>
+                        <label for="memory">Remember that one time I got my hand stuck in my mouth?</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+                    </div>
+                </div>
+            </form>
         </div>
 
-        <form class="col s12" id="add-a-memory-form">
-            <div class="row">
-                <div class="input-field col s6">
-                    <input id="firstName" type="text" class="validate">
-                    <label for="firstName">First Name</label>
-                </div>
-                <div class="input-field col s6">
-                    <input id="lastName" type="text" class="validate">
-                    <label for="lastName">Last Name</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <textarea id="memory" class="materialize-textarea"></textarea>
-                    <label for="memory">Remember that one time I got my hand stuck in my mouth?</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
-                </div>
-            </div>
-        </form>
+        <div class="container hidden" id="errors-wrapper">
+            <ul id="errors-list">
+
+            </ul>
+        </div>
     </div>
 
-    <div class="container hidden" id="errors-wrapper">
-        <ul id="errors-list">
-
-        </ul>
-    </div>
-</div>
-
-<script type="text/javascript" src="assets/materialize/js/materialize.min.js"></script>
-<script type="text/javascript" src="assets/js/global.js"></script>
-<script type="module" src="assets/js/addMemory.js"></script>
-</body>
+    <script type="text/javascript" src="assets/materialize/js/materialize.min.js"></script>
+    <script type="text/javascript" src="assets/js/global.js"></script>
+    <script type="module" src="assets/js/addMemory.js"></script>
+    </body>
 </html>
