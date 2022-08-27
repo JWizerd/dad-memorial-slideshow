@@ -156,8 +156,14 @@ hr.fancy:before { /* Not really supposed to work, but does */
   border-radius: 20px;
 }
 
+.sidenav li > a {
+  font-weight: bold;
+  font-size: 18px;
+}
+
 .sidenav li > a.active {
   color: skyblue;
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .sidenav-overlay {
