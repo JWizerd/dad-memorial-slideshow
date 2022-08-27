@@ -86,6 +86,7 @@ h2 {
   color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-shadow: 1px 1px 1px gray;
 }
 
 h1 {
