@@ -8,6 +8,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Stan', sans-serif;
 }
 
 body,
@@ -82,7 +83,6 @@ h1,
 h2 {
   text-align: center;
   width: 100%;
-  font-family: 'Stan', sans-serif;
   color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
