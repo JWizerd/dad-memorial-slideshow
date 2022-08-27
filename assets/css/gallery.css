@@ -1,5 +1,9 @@
+body, html {
+  background: skyblue;
+}
+
 #gallery-wrapper {
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
   padding: 40px 0;
 }
@@ -10,12 +14,30 @@
 
 .gallery-item {
   display: inline-block;
-  width: 200px;
-  height: 200px;
-  margin: 10px;
+  width: 15%;
+  height: 275px;
+  margin: 5px;
   overflow: hidden;
 }
 
-.gallery-img {
-  max-width: 200px;
+.gallery-item img {
+  width: 100%;
+}
+
+@media all and (max-width:991px) {
+  #gallery-wrapper {
+    width: 100%;
+  }
+
+  .gallery-item {
+    width: 25%;
+    margin: 2px;
+  }
+}
+
+@media all and (max-width:480px) {
+  .gallery-item {
+    width: 40%;
+    height: 150px;
+  }
 }
