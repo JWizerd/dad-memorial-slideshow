@@ -133,6 +133,10 @@ h2 {
   margin-top: 25px;
 }
 
+.mb0 {
+  margin-bottom: 0;
+}
+
 .bold {
   font-weight: bold;
 }
