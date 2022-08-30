@@ -121,6 +121,7 @@ function showButton(id) {
 }
 
 function init(){
+  let SLIDESHOW_STARTED = false;
   appendImages(window.SLIDE_DATA);
   const slider = tns(sliderOptions);
   document.getElementById('slideshow').addEventListener('click', () => playSlideshow(slider));
@@ -131,6 +132,18 @@ function init(){
     hideButton('loop');
     showButton('restart');
   }));
+  document.body.addEventListener("keyup", function(e) {
+    if (e.key == " " ||
+        e.code == "Space"
+    ) {
+      if (SLIDESHOW_STARTED) {
+        restart();
+      } else {
+        playSlideshow(slider);
+        SLIDESHOW_STARTED = true;
+      }
+    }
+  });
 
   songOne.onended = function() {
     songTwo.play();
