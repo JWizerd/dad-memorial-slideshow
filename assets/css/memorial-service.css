@@ -1,0 +1,19 @@
+.memorial-service {
+  text-align: center;
+}
+
+#video {
+  width: 100%;
+  min-height: 400px;
+}
+
+@media (min-width: 1200px) {
+  #video {
+    width: 75%;
+    min-height: 60vh;
+  }
+
+  .ytp-title-channel-logo {
+    display: none;
+  }
+}
