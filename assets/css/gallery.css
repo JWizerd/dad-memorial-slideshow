@@ -1,5 +1,5 @@
 body, html {
-  background: skyblue;
+  background: var(--backgroundColor);
 }
 
 #gallery-wrapper {
