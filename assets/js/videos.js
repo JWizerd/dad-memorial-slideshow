@@ -18,7 +18,7 @@ const videos = {
    */
   libs: {
     vimeo: Vimeo,
-    youtube: YT
+    youtube: undefined
   },
 }
 
