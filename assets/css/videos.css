@@ -1,0 +1,13 @@
+body, html {
+  background: var(--backgroundColor);
+}
+
+.video {
+  aspect-ratio: 2/1;
+  margin: 10px auto;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
