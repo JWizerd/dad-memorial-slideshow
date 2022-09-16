@@ -40,7 +40,7 @@ const videoCollection = [
     provider: videos.providers.vimeo
   },
   {
-    id: 'WLqxFAh1sCg',
+    id: 'IBwiAq9FgN8',
     provider: videos.providers.youtube
   }
 ]
